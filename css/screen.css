@@ -1,0 +1,175 @@
+/* reset css DOM */
+html {
+    font-size: 62.5%;
+    /* 16px * 62,5% = 1rem */
+}
+
+body {
+    font: 1.6rem sans-serif;
+    margin: 0rem;
+}
+
+* {
+    /*Selecteur universel*/
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+ol,
+figure {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-weight: 100;
+}
+
+a,
+details,
+summary,
+input {
+    text-decoration: none;
+    color: #222;
+    outline: 0;
+}
+
+input {
+    border: 0;
+    background-color: #fff;
+}
+
+/* Theme */
+
+:root {
+    --color-warning: rgb(200, 0, 0);
+    --color-success: rgb(0, 200, 0);
+}
+
+header h1,
+section h2 {
+    text-align: center;
+    line-height: 4.5rem;
+    margin-bottom: 1rem;
+}
+
+header h1::before,
+section h2::before {
+    content: '\2605';
+    color: grey;
+    font-size: 3.6rem;
+    margin-right: 0.3rem;
+    transform: rotate(0);
+    transition-duration: 0.2s;
+    display: inline-block;
+}
+
+.green{
+    color: var(--color-success);
+}
+
+
+section h2::before{
+    content: '\2714';
+}
+
+header h1:hover::before {
+    transform: rotate(360deg);
+}
+
+/*Formulaire*/
+main .form{
+    display: none;
+}
+
+section .checked::before{
+    color: green;
+}
+
+
+
+section:nth-child(2) p {
+    display: none;
+}
+/* Warning */
+.warning,
+.success {
+    background-color: var(--color-warning);
+    color: white;
+    text-align: center;
+    line-height: 7rem;
+}
+
+.success {
+    background-color: var(--color-success);
+}
+
+section:nth-child(2),
+section a,
+footer {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #fafafa;
+    border: solid 0.1rem transparent;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 1rem #222;
+}
+
+form label {
+    color: #222;
+}
+
+section form label,
+section form input,
+section a {
+    display: block;
+    width: 100%;
+    line-height: 5rem;
+}
+
+section form>input[name="login"],
+section form>input[name="password"] {
+    background-color: #fff;
+    border: solid 0.1rem #ccc;
+    padding: 0.5rem;
+    color: #333;
+    font-size: 1.7rem;
+    border-radius: 0.3rem;
+    box-shadow: inset 0.1rem -0.1rem 0.3rem #ccc;
+    transition-duration: 0.9s;
+}
+
+section form>input[name="login"]:focus,
+section form>input[name="password"]:focus {
+    box-shadow: 0 0 1rem rgb(150, 0, 0);
+}
+
+section form input[type="submit"],
+section a {
+    background-color: rgb(51, 69, 233);
+    margin-top: 1.0rem;
+    font-size: 1.7rem;
+    color: #fff;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+section a {
+    max-width: 20rem;
+    margin: 0.5rem auto 1.0rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+footer * {
+    text-align: center;
+}

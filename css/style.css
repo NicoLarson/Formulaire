@@ -1,0 +1,41 @@
+/* Reset */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font: 1.6rem sans-serif;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+label,
+input{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-weight: 100;
+}
+
+/* Theme */
+:root{
+    --color-primary:#ecf0f1;
+    --color-primaryDark:#bdc3c7;
+    --color-secondary:#34495e;
+    --color-secondaryDark:#2c3e50;
+}
+header h1{
+    background-color: var(--color-secondaryDark);
+    color: var(--color-primary);
+    text-align: center;
+    padding: 2rem;
+    text-transform: uppercase;
+}
+main{
+    padding: 2rem;
+}
